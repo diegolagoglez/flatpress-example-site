@@ -12,7 +12,7 @@ All entries are from my old and disapeared blog.
 
 First of all, deploy FlatPress.
 
-Second, go to `&lt;my-flatpress-deployment-dir&gt;/site` and deploy this site with:
+Second, go to *`<my-flatpress-deployment-dir>`*`/site` and deploy this site with:
 
 ```bash
 $ git clone https://github.com/diegolagoglez/flatpress-example-site
