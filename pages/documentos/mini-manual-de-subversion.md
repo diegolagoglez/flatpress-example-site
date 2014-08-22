@@ -1,4 +1,6 @@
-# Índice
+# Mini manual de Subversion
+
+## Índice
 
 1.  [Introducción](#introduccion)
 2.  [Qué es Subversion](#queessubversion)
@@ -11,13 +13,13 @@
 9.  [Resumen de comandos](#resumencomandos)
 10. [Anexo A: Script de inicio del servidor de Subversion — svnserve](#anexo)
 
-# Introducción
+## Introducción
 
 Este documento describe el funcionamiento básico de un servidor y los clientes de la aplicación de control de versiones [Subversion](http://subversion.tigris.org/) bajo la plataforma Linux.
 
 Con este documento será posible configurar el servidor, crear nuevos repositorios y manejar proyectos.
 
-# Qué es Subversion
+## Qué es Subversion
 
 Subversion es un [sistema de control de versiones](http://es.wikipedia.org/wiki/Sistema_de_control_de_versi%C3%B3n), generalmente de código fuente de proyectos aunque se puede utilizar para cualquier contenido susceptible de ser versionado, desarrollado por la empresa Tigris y publicado bajo licencia libre Apache/BSD.
 
@@ -27,7 +29,7 @@ La filosofía de Subversion es tener un repositorio central, donde se guarda el 
 
 Este enfoque es contrario a otros sistema de control de versiones para proyectos grandes como [Git](http://es.wikipedia.org/wiki/Git), donde cada cliente se trata como un cliente P2P y no hay un repositorio central, sino que todos los clientes son parte del repositorio.
 
-# Creación y configuración de un repositorio
+## Creación y configuración de un repositorio
 
 El repositorio básico de Subversion se crea en una máquina, generalmente dedicada, que va a actuar como servidor principal de desarrollo y es a esta máquina a la que tienen que acceder todos los clientes tanto para actualizar sus proyectos como para subir los cambios nuevos.
 
@@ -55,7 +57,7 @@ Una vez funcionado el repositorio, para acceder al mismo mediante el comando svn
 diego@server:\~:\$ svn list svn://servidor/repositorio
 ```
 
-# Seguridad básica en un repositorio de Subversion
+## Seguridad básica en un repositorio de Subversion
 
 La configuración de la seguridad en un repositorio de Subversion se encuentra en el directorio `/ruta/al/repositorio/conf`. En en este directorio se encuentran tres archivos de configuración para el servidor `svnserve` junto con la seguridad de acceso al mismo:
 
@@ -70,7 +72,7 @@ La configuración de la seguridad en un repositorio de Subversion se encuentra e
 
 Además de esta configuración básica, se puede usar Subversion mediante un túnel por SSH poniendo las URL de la forma `svn+ssh://servidor/repositorio/`. Para ello es necesario configurar el servidor `svnserve` añadiendo la clausula `[tunnels]` en `svnserve.conf` e indicando cual va a ser el programa de *tunneling* (rsh = ssh, por ejemplo).
 
-# Estructura recomendada de un repositorio
+## Estructura recomendada de un repositorio
 
 Los repositorio de Subversion pueden tener cualquier estructura ya que se comportan igual que un directorio local al que pueden acceder varios usuarios, pero el equipo de desarrollo de Subversion recomienda una estructura de directorios para cada proyecto de la siguiente forma:
 
@@ -85,7 +87,7 @@ Los repositorio de Subversion pueden tener cualquier estructura ya que se compor
 -   En caso de necesitar cambiar en desarrollo de la rama principal a una rama de tipo *branch*, se puede usar el modificador `switch` del comando `svn` de la siguiente forma (dentro del directorio local de la rama principal —trunk—): `svn switch svn://servidor/repositorio/miproyecto/branches/mi-branch-de-desarrollo`.
 -   Para volver a la rama principal desde un *branch*, ubicados en el directorio local del *branch*, se ejecuta el siguiente comando: `svn switch svn://servidor/repositorio/miproyecto/trunk`.
 
-# Creación y manejo de proyectos
+## Creación y manejo de proyectos
 
 La primera vez que se importa un proyecto al repositorio, suponiendo que ya esté dicho repositorio creado, se realiza mediante el siguiente comando, ubicado donde está nuestros archivos fuente del proyecto:
 
@@ -107,7 +109,7 @@ A partir de aquí, ya se pueden hacer cambios en el código fuente del proyecto 
 
 Además, una vez hecho el *checkout*, ya no es necesario disponer de copia local del proyecto si no se está desarrollando. Se puede borrar sin problemas siempre que todos los cambios estén en el repositorio.
 
-# Comandos básicos
+## Comandos básicos
 
 Una vez descargado localmente el proyecto en el que se va a trabajar, existen una serie de comandos para mantener actualizado tanto el proyecto en el repositorio como la copia local. Estos comandos son de la forma `svn [comando]` y teniendo que ejecutarse en el directorio o algún subdirectorio de la copia local. Los subcomandos `[comando]` son alguno de los siguientes:
 
@@ -127,7 +129,7 @@ Una vez descargado localmente el proyecto en el que se va a trabajar, existen un
 -   `log` : Muestra los mensajes de log de la copia de trabajo. Es necesario hacer un `update` para que estén todos los logs del proyecto.
 -   `switch` : Actualiza la copia de trabajo a un directorio distinto. Esto es útil para cambiar entre diferente branches que se verán en el siguiente punto.
 
-# Creación y manejo de *branches* (ramas)
+## Creación y manejo de *branches* (ramas)
 
 Un *branch* es una copia completa, generalmente de la rama principal de desarrollo, que se usa para desarrollar una funcionalidad que afecta al funcionamiento correcto del proyecto por lo que no se puede desarrollar directamente sobre el *trunk* del proyecto.
 
@@ -156,7 +158,7 @@ diego@server:/proyectos/miproyecto:\$ svn merge -reintegrate svn://servidor/repo
 diego@server:/proyectos/miproyecto:\$ svn commit -m "Combinado mi branch con el trunk."
 ```
 
-# Resumen de comandos
+## Resumen de comandos
 
 Acción/Comando
 
@@ -208,7 +210,7 @@ Eliminar una *branch* o una *tag*
 
 `svn rm URL`
 
-# Anexo A: Script de inicio del servidor de Subversion – svnserve
+## Anexo A: Script de inicio del servidor de Subversion – svnserve
 
 ```bash
 \#! /bin/sh -e\
