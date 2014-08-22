@@ -1,3 +1,5 @@
+# Función en Javascrip para filtrar filas de una tabla
+
 Como en la [entrada anterior de Javascrip para crear solapas](/archivo/2012/informatica/funcion-en-javascript-para-crear-solapas-tabs.html), para filtrar las filas de una tabla también existen multitud de ejemplos en la Web, [incluidos plug-ins de jQuery](https://github.com/riklomas/quicksearch).
 
 Pero como a mi me gusta experimentar para aprender, aquí está mi versión del filtrado de filas de una tabla. De momento no es plug-in de jQuery pero, como la vez anterior, no creo que sea demasiado difícil adaptarlo. Y, por supuesto que tiene sus fallos, pero se irán subsanando con el tiempo.
