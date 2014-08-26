@@ -4,5 +4,5 @@
 > — ¿Sube o baja?
 > — Sí.
 
-Vía [@inf_enfurecido](https://twitter.com/inf_enfurecido/status/215173280406044674)
+Vía [\@inf_enfurecido](https://twitter.com/inf_enfurecido/status/215173280406044674)
 
