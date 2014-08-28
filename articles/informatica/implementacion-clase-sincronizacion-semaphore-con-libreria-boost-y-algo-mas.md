@@ -6,7 +6,7 @@ La librería [`boost`](http://www.boost.org/) —una de las mejores librerías g
 
 Es por esto que, para no tener que usar un variable de condición, un `mutex` y un contador cada vez que se quiere implementar un semáforo, se puede usar esta clase:
 
-```c++
+~~~~{.cpp}
 #include <boost/thread.hpp>
 #include <boost/thread/condition_variable.hpp>
 #include <boost/thread/mutex.hpp>
@@ -42,13 +42,13 @@ class Semaphore {
             return fCounter == 0;
         }
 };
-```
+~~~~
 
 Un buen ejemplo de uso de un semáforo es implementar una cola de datos usada para el famoso [problema del productor/consumidor](http://en.wikipedia.org/wiki/Producer-consumer_problem), es decir, tenemos dos procesos, uno que produce datos y los mete en la cola, y otro que los consume sacándolos de dicha cola teniendo en cuenta que, cuando la cola está vacía, el consumidor está bloqueado esperando a que haya más valores.
 
 Para ello, la implementación de la cola podría ser la siguiente:
 
-```c++
+~~~~{.cpp}
 #include <deque.hpp>
 
 using std::deque;
@@ -79,11 +79,11 @@ class Queue {
             return elem;
         }
 };
-```
+~~~~
 
 Y el programa de prueba implementando dos funciones, una el productor y otra el consumidor, y usando [hilos de `boost`](http://www.boost.org/doc/libs/1_48_0/doc/html/thread.html) sería:
 
-```c++
+~~~~{.cpp}
 #include <boost/ref.hpp>
 #include <boost/date_time.hpp>
 #include <iostream>
@@ -124,7 +124,7 @@ main() {
 
     return 0;
 }
-```
+~~~~
 
 En este ejemplo, el hilo productor inserta cinco números cada 4 segundos (a ráfagas) mientras que el productor saca un número cada 100 milisegundos. Cuando la cola está vacía, gracias al semáforo el hilo consumidor espera hasta que el productor inserte más números, y así sucesivamente.
 
