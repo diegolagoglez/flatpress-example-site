@@ -1,0 +1,29 @@
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+/* General */
+body {
+	font: 100%/1.5em Ubuntu, 'Trebuchet MS', Verdana, Helvetica, sans-serif;
+}
+
+header {
+}
+
+nav {
+}
+
+main {
+}
+
+aside {
+}
+
+footer {
+}
