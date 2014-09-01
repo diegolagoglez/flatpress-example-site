@@ -1,3 +1,75 @@
+/* Fonts installed on server */
+@font-face {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: normal;
+	src: local('Ubuntu'), url('/fonts/Ubuntu-R.ttf');
+}
+
+@font-face {
+	font-family: Ubuntu;
+	font-style: italic;
+	font-weight: normal;
+	src: local('Ubuntu Italic'), url('/fonts/Ubuntu-RI.ttf');
+}
+
+@font-face {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	src: local('Ubuntu Bold'), url('/fonts/Ubuntu-B.ttf');
+}
+
+@font-face {
+	font-family: Ubuntu;
+	font-style: italic;
+	font-weight: bold;
+	src: local('Ubuntu Bold Italic'), url('/fonts/Ubuntu-BI.ttf');
+}
+
+@font-face {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: 300;
+	src: local('Ubuntu Light'), url('/fonts/Ubuntu-L.ttf');
+}
+
+@font-face {
+	font-family: Ubuntu;
+	font-style: italic;
+	font-weight: 300;
+	src: local('Ubuntu Light Italic'), url('/fonts/Ubuntu-LI.ttf');
+}
+
+@font-face {
+	font-family: "Ubuntu Mono";
+	font-style: normal;
+	font-weight: normal;
+	src: local('Ubuntu Mono'), url('/fonts/UbuntuMono-R.ttf');
+}
+
+@font-face {
+	font-family: "Ubuntu Mono";
+	font-style: italic;
+	font-weight: normal;
+	src: local('Ubuntu Mono'), url('/fonts/UbuntuMono-RI.ttf');
+}
+
+@font-face {
+	font-family: "Ubuntu Mono";
+	font-style: normal;
+	font-weight: bold;
+	src: local('Ubuntu Mono'), url('/fonts/UbuntuMono-B.ttf');
+}
+
+@font-face {
+	font-family: "Ubuntu Mono";
+	font-style: italic;
+	font-weight: bold;
+	src: local('Ubuntu Mono'), url('/fonts/UbuntuMono-BI.ttf');
+}
+/* ! Fonts installed on server */
+
 /* Basic reset */
 * {
 	margin: 0;
