@@ -22,8 +22,35 @@ header, nav, main, aside, footer {
 header {
 }
 
+/* > Navigation */
 nav {
 }
+
+nav ul {
+	background: white;
+}
+
+nav ul li {
+	display: inline;
+	position: relative;
+}
+
+nav ul li:hover ul {
+	display: block;
+	position: absolute;
+	top: 1.1em;
+	left: 0;
+}
+
+nav ul li ul {
+	display: none;
+	font-size: .9em;
+}
+
+nav ul li ul li {
+	display: block;
+}
+/* < Navigation */
 
 main {
 }
