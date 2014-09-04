@@ -12,6 +12,11 @@ ul, ol {
 body {
 	font: 100%/1.5em Ubuntu, 'Trebuchet MS', Verdana, Helvetica, sans-serif;
 	font-weight: 300;
+	padding: 0 10%;
+}
+
+header, nav, main, aside, footer {
+	border: 1px solid red;
 }
 
 header {
