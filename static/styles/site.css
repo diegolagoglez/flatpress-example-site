@@ -4,7 +4,7 @@
 	padding: 0;
 }
 
-ul, ol {
+ul {
 	list-style-type: none;
 }
 
@@ -70,11 +70,11 @@ article {
 	font-size: 2em;
 	line-height: 1.4em;
 	color: #777777;
-	margin: 10px 0;
+	margin: 1em 0;
 }
 
 article p {
-	margin: 10px 0;
+	margin: 1em 0;
 }
 
 article pre {
@@ -82,6 +82,33 @@ article pre {
 	overflow: auto;
 	line-height: 1.2em;
 }
+
+article ul, article ol {
+	margin-left: 2.2em;
+}
+
+article ul {
+	list-style-type: disc;
+}
+
+article blockquote {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-style: italic;
+	font-size: 1.3em;
+	line-height: 1.3em;
+	color: #999999;
+	margin-left: 3em;
+	position: relative;
+}
+
+/*article blockquote:before {
+	content: "”";
+	font-size: 20em;
+	color: #DDDDDD;
+	position: absolute;
+	top: 0;
+	left: 0;
+}*/
 /* << Articles */
 /* < Main */
 
