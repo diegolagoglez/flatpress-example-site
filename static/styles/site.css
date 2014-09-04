@@ -52,16 +52,22 @@ nav ul li ul li {
 }
 /* < Navigation */
 
+/* > Main */
 main {
 	float: left;
 	width: 75%;
 }
+/* < Main */
 
+/* > Aside (sidebar) */
 aside {
 	float: right;
 	width: 24%;
 }
+/* < Aside (sidebar) */
 
+/* > Footer */
 footer {
 	clear: both;
 }
+/* < Footer */
